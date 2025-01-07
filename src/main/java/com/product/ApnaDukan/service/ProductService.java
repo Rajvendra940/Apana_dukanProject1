@@ -7,6 +7,8 @@ import org.springframework.web.client.RestTemplate;
 import com.product.ApnaDukan.entity.Product;
 import com.product.ApnaDukan.repository.ProductOderRepository;
 
+import java.util.List;
+
 @Service
 public class ProductService {
 
@@ -29,7 +31,11 @@ public class ProductService {
 
 		return productOderRepository.save(product);
 	}
-	
+
+	public List <Product> findProduct(){
+		return  productOderRepository.findAll();
+
+	}
 	
 
 }
